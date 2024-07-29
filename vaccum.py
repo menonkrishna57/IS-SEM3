@@ -1,12 +1,12 @@
-rooms=[1,2]
 status=[]
-n=len(rooms)
+n=int(input("How many rooms: "))
+rooms=list(range(1,n+1))
 for i in range(n):
-    print(f"Is room {i} clean[0] or dirty[1]?")
+    print(f"Is room {rooms[i]} clean[0] or dirty[1]?")
     status.append(int(input()))
-    # if status[i]!=1 or status[i]!=0:
-    #     print("Invalid Input Detected")
-    #     break;
+    if status[i] not in [0,1]:
+        print("Invalid Input Detected")
+        break;
 
 for i in range(n):
     if status[i]==1:
